@@ -33,7 +33,8 @@ motor1.throttle = 0.0
 motor2.throttle = 0.0
 print("-- throttle:", motor1.throttle)
 # Motor specs (Adjust for your motor)
-max_rpm = 185  # Motor's max RPM at 100% duty cycle
+# at 5V from Battery --> 3.8V at motor --> ~140 RPM
+max_rpm = 140  # Motor's max RPM at 100% duty cycle
 
 
 # Function to get estimated RPM
