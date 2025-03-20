@@ -89,7 +89,7 @@ while True:
             if data:
                 text = data.decode("utf-8").strip()
                 print("Text Sent: ", text)
-                # w go faster, d slow down, a left motor increase,
+                # w go faster, s slow down, a left motor increase,
                 # d right motor increase, r stop
                 if text and text == "w":
                     handle_throttle(0.1, 0.1)
