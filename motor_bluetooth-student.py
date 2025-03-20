@@ -29,9 +29,8 @@ pwm_b1 = pwmio.PWMOut(PWM_PIN_B1, frequency=50)
 pwm_b2 = pwmio.PWMOut(PWM_PIN_B2, frequency=50)
 motor2 = motor.DCMotor(pwm_b1, pwm_b2)
 
-print("Forwards slow")
-motor1.throttle = 0.5
-motor2.throttle = 0.5
+motor1.throttle = 0.0
+motor2.throttle = 0.0
 print("-- throttle:", motor1.throttle)
 # Motor specs (Adjust for your motor)
 max_rpm = 185  # Motor's max RPM at 100% duty cycle
@@ -72,6 +71,10 @@ def handle_throttle(mtr1_increase, mtr2_increase):
     if (...):
         motor2.throttle += ...
 
+# set your throttles to zero
+def stop():
+    ...
+
 counter = 0
 while True:
     ua.connect()
@@ -86,6 +89,8 @@ while True:
             if data:
                 text = data.decode("utf-8").strip()
                 print("Text Sent: ", text)
+                # w go faster, d slow down, a left motor increase,
+                # d right motor increase, r stop
                 if text and text == "w":
                     handle_throttle(0.1, 0.1)
                 ...
