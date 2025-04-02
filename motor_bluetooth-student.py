@@ -61,12 +61,12 @@ def write_rpms(rpms):
 # This mehtod is passed the amount of increase(which could be negative)
 # for each motor
 # Steps:
-#  1. Determine the potential change on eahc motor
-#  2. For each motor, Be sure the potential change is between 0 and 1 
+#  1. Determine the potential new throttle on each motor
+#  2. For each motor, Be sure the potential new throttle is between -1 and 1 
 #  3. For each motor, change the throttle value by the appropriate parameter
 def handle_throttle(mtr1_increase, mtr2_increase):
-    mtr1_pot_change = ...
-    mtr2_pot_change = ..
+    mtr1_pot_new_throttle = ...
+    mtr2_pot_new_throttle = ..
     if (...):
         motor1.throttle += ...
     if (...):
