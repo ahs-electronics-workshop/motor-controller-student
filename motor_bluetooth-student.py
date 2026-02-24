@@ -56,7 +56,7 @@ def write_rpms(rpms):
     msg = f"a1: {rpms[0]:.2f}; "
     msg += f"a2: {rpms[1]:.2f}\n"
     ...
-    ua.write(....)
+    ua.write(...)
 
 # This mehtod is passed the amount of increase(which could be negative)
 # for each motor
@@ -66,7 +66,7 @@ def write_rpms(rpms):
 #  3. For each motor, change the throttle value by the appropriate parameter
 def handle_throttle(mtr1_increase, mtr2_increase):
     mtr1_pot_new_throttle = ...
-    mtr2_pot_new_throttle = ..
+    mtr2_pot_new_throttle = ...
     if (...):
         motor1.throttle += ...
     if (...):
@@ -96,3 +96,4 @@ while True:
                     handle_throttle(0.1, 0.1)
                 ...
                 write_rpms(get_all_rpm())
+
