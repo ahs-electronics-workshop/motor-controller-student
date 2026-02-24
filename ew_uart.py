@@ -21,7 +21,7 @@ uart = UARTService()
 advertisement = ProvideServicesAdvertisement(uart)
 
 def setup(name):
-    ble.name = "morris-ble"
+    ble.name = name
 
 def connect():
     ble.start_advertising(advertisement)
@@ -51,5 +51,6 @@ def button_press(data):
         if packet.button in button_map:
             print(f"{button_map[packet.button]} button pressed!")
             return button_map[packet.button]
+
 
     return None
